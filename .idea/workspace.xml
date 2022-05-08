@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="269ec413-0a99-4b74-a1d9-a9fab3e8772b" name="Changes" comment="use pat routing">
+    <list default="true" id="269ec413-0a99-4b74-a1d9-a9fab3e8772b" name="Changes" comment="use chi routing">
+      <change afterPath="$PROJECT_DIR$/cmd/web/middleware.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmd/web/routes.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/web/routes.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
@@ -108,7 +109,8 @@
     <MESSAGE value="Optimizing our template cache" />
     <MESSAGE value="sharing data with templates" />
     <MESSAGE value="use pat routing" />
-    <option name="LAST_COMMIT_MESSAGE" value="use pat routing" />
+    <MESSAGE value="use chi routing" />
+    <option name="LAST_COMMIT_MESSAGE" value="use chi routing" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
