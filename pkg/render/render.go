@@ -33,7 +33,7 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 		// get the template cache from the app config
 		tc = app.TemplateCache
 	} else {
-		tc, _ = CreateTempleCache()
+		tc, _ = CreateTemplateCache()
 	}
 
 	t, ok := tc[tmpl]
@@ -48,12 +48,12 @@ func RenderTemplate(w http.ResponseWriter, tmpl string, td *models.TemplateData)
 
 	_, err := buf.WriteTo(w)
 	if err != nil {
-		fmt.Println("Error writing template to browser", err)
+		fmt.Println("error writing template to browser", err)
 	}
 }
 
 // CreateTempleCache creates template cache as a map
-func CreateTempleCache() (map[string]*template.Template, error) {
+func CreateTemplateCache() (map[string]*template.Template, error) {
 
 	myCache := map[string]*template.Template{}
 
@@ -73,6 +73,7 @@ func CreateTempleCache() (map[string]*template.Template, error) {
 		if err != nil {
 			return myCache, err
 		}
+
 		if len(matches) > 0 {
 			ts, err = ts.ParseGlob("./templates/*.layout.tmpl")
 			if err != nil {
@@ -82,5 +83,6 @@ func CreateTempleCache() (map[string]*template.Template, error) {
 
 		myCache[name] = ts
 	}
+
 	return myCache, nil
 }
